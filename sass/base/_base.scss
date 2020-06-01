@@ -18,16 +18,24 @@ html{
     scroll-behavior: smooth;
 }
 
+
 body{
-    font-family: 'Josefin Sans', sans-serif;
-    -webkit-font-smoothing: antialiased;
+    background: $color-grey;
     box-sizing: border-box;
-}
+  }
 
 a{
     text-decoration: none;
-    color: $dark_grey;
+    color: $color-dark-grey;
 }
 li{
     list-style: none;
+}
+
+.ccontainer{
+  display: grid;
+  grid-template-rows: 80vh  repeat(6, min-content);
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end grid-start] minmax(6rem, 1fr)    
+  [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 
+  minmax(6rem, 1fr) [grid-end];    
 }

@@ -1,0 +1,66 @@
+
+.header{
+    background: linear-gradient(rgba($color-black, .8), rgba(51, 34, 61, 0.8)),
+     url('../../images/Hero.jpg');
+    height: 80vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 3rem 0;
+    
+    &__box{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    &__nav{
+        .nav-item{
+            color: $color-white;
+            font-weight: 400;
+            font-size: 1.8rem;
+            text-decoration: none;
+            margin-right: 3rem;
+        }
+    }
+    &__logo{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        color: $color-white;
+        font-weight: 700;
+        font-size: 2rem;
+        margin-left: 3rem;
+        text-decoration: none;
+        .logo-name::first-letter{
+            font-size: 4rem;
+            font-weight: bold;
+            // color: $color-primary;
+        }  
+    }
+     
+    &__content{
+        position: relative;
+        padding: 8rem 0 12rem 0;
+        .heading-primary, .subtitle{
+            color: $color-white;
+            text-align: center;
+        }
+        .heading-primary{
+            font-weight: 500;
+            font-size: 5rem;
+        }
+        
+        .subtitle{
+            font-weight: 300;
+            font-size: 2.4rem;
+            width: 500px;
+            margin: 0 auto 2rem auto;
+            line-height: 1.2;
+        }
+        
+    }
+
+}
+
+
+

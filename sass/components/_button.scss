@@ -1,0 +1,70 @@
+.btn-wrapper{
+    width: 35vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto ;
+}
+.btn{
+    &,
+    &:visited,
+    &:link{
+        display: inline-block;
+        position: relative;
+        color: $color-white;
+        text-transform: capitalize;
+        text-decoration: none;
+        font-size: $default-font-size;
+        padding:.8rem 6rem;
+        margin: 0 1rem ;
+        outline: none;
+        border-radius: 3rem;
+        transition: all .2s;
+    }
+
+    &:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.3);
+    }
+
+    &:active,:focus{
+        /* clicked */
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba($color-black, 0.3);
+    }
+
+    &--highlight{
+        background-color: $color-primary;
+    }
+    &--secondary{
+        border: 2px rgba(250, 250, 250, 0.35) solid;
+    }
+
+    &--animated{
+        animation: moveInBottom .3s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+    &--black{
+        background: $color-dark-grey;
+        border-radius: none;    
+    }
+    &--small{
+        padding: .3rem 1.5rem;
+    }
+    
+    &--large{
+        padding: 1rem 5rem;
+        font-size: 1.35rem;
+    }
+}
+
+
+
+
+
+
+
+
+

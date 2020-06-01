@@ -10,37 +10,41 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
     <!-- hero section -->
-    <section id="hero">
-        <div class="wrapper">
-            <header>
-                <a href="index.html" id="logo">
-                    <span className="grey-color"> &lt;</span>
-                    <span className="logo-name">Mayow Dev</span>
-                    <span className="grey-color">/&gt;</span>
-                  </a>
-                <nav>
-                    <a href="index.html" >01.  Home</a>
-                    <a href="#about" >02.  About</a>
-                    <a href="#projects" >03.  Portfolio</a>
-                    <a href="#contact" >04.  Contact</a>
-                </nav>
-            </header>
-            <div class="hero-content">
-                <h1 class="title"><span>Hi👋🏼! I'm Mayow. </span>I Build things for the web </h1>
-                <h3 class="subtitle">I'm a Full-Stack developer specializing in building pixel-perfect user interfaces and secure modern backends.</h3>
-                <div class="btn-wrapper">
-                    <a href="#" class="btn btn_highlight">Portfolio</a>
-                    <a href="#" class="btn btn_secondary">Resume</a>
-                </div>
+    <header class="header">
+        <div class="header__box">
+            <a href="index.html" class="header__logo">
+                <span class="grey-color"> &lt;</span>
+                <p class="logo-name">Mayow Dev</p>
+                <span class="grey-color">/&gt;</span>
+            </a>
+            <nav class="header__nav">
+                <a class="nav-item" href="index.html" >01.  Home</a>
+                <a class="nav-item" href="#about" >02.  About</a>
+                <a class="nav-item" href="#projects" >03.  Portfolio</a>
+                <a class="nav-item" href="#contact" >04.  Contact</a>
+            </nav>
+        </div>
+        <div class="header__content">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main">Hi👋🏼! I'm Mayow. </span>
+                <span class="heading-primary--sub"> I Build things for the web </span>
+            </h1>
+            <p class="subtitle">
+                I'm a Full-Stack developer specializing in building pixel-perfect 
+                user interfaces and secure modern backends.
+            </p>
+            <div class="btn-wrapper">
+                <a href="#" class="btn btn--highlight">Portfolio</a>
+                <a href="#" class="btn btn--secondary">Resume</a>
             </div>
         </div>
-    </section>  
+    </header>
+    
 
       <!--- skills section ---> 
-      <section id="skills" class="cf">
-          <div class="wrapper">
+      <section id="skills" >
+          <div class="wrapper skills">
               <div class="skill">
                   <h3>Web Design</h3>
                   <div class="dev-icons">
@@ -95,8 +99,8 @@
                     </p>
                     <p class="tools">Tools used: React & Redux, Node.js and Express</p>
                     <div class="btn_wrapper">
-                        <a href="#" class="btn btn_black btn_small" >Live</a>
-                        <a href="#" class="btn btn_small btn_black">Github</a>
+                        <a href="#" class="btn btn--black btn--small" >Live</a>
+                        <a href="#" class="btn btn--small btn--black">Github</a>
                     </div>
                 </div>
             </div>
@@ -111,8 +115,8 @@
                     </p>
                     <p class="tools">Tools used: React & Redux, Node.js and Express</p>
                     <div class="btn_wrapper">
-                        <a href="#" class="btn btn_black btn_small" >Live</a>
-                        <a href="#" class="btn btn_small btn_black">Github</a>
+                        <a href="#" class="btn btn--black btn--small" >Live</a>
+                        <a href="#" class="btn btn--small btn--black">Github</a>
                     </div>
                 </div>
                 <img class="project-image" src="./images/movie-mackbook.png" alt="movie-project">
@@ -130,8 +134,8 @@
                     </p>
                     <p class="tools">Tools used: React & Redux, Node.js and Express</p>
                     <div class="btn_wrapper">
-                        <a href="#" class="btn btn_black btn_small" >Live</a>
-                        <a href="#" class="btn btn_small btn_black">Github</a>
+                        <a href="#" class="btn btn--black btn--small" >Live</a>
+                        <a href="#" class="btn btn--small btn--black">Github</a>
                     </div>
 
                 </div>
@@ -221,7 +225,7 @@
         <div class="wrapper">
             <h2 class="title">Get in touch</h2>
             <p class="sub_title">I'm currently open for a new roles, so please feel free to reach out for any new opportunity </p>
-            <a href="#" class="btn btn_highlight btn_large">Cotact Me</a>
+            <a href="#" class="btn btn--highlight btn--large">Cotact Me</a>
         </div>
       </section>   
      
