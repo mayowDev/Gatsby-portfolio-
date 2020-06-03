@@ -1,10 +1,16 @@
-.btn-wrapper{
+.btn-box{
     width: 35vw;
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     align-items: center;
     text-align: center;
     margin: 0 auto ;
+    flex-wrap: wrap;
+    justify-content: space-around ;
+    margin-top: 3rem;
+    @include responsive(tablet-land){
+        width: 50%; //1200px
+    }
 }
 .btn{
     &,
@@ -28,7 +34,8 @@
         box-shadow: 0 1rem 2rem rgba($color-black, 0.3);
     }
 
-    &:active,:focus{
+    &:active,
+    &:focus{
         /* clicked */
         outline: none;
         transform: translateY(-1px);
@@ -42,18 +49,21 @@
         border: 2px rgba(250, 250, 250, 0.35) solid;
     }
 
-    &--animated{
-        animation: moveInBottom .3s ease-out .75s;
-        animation-fill-mode: backwards;
-    }
+    // &--animated{
+    //     animation: moveInBottom .3s ease-out .75s;
+    //     animation-fill-mode: backwards;
+    // }
+
+        
     &--black{
         background: $color-dark-grey;
         border-radius: none;    
     }
+
     &--small{
         padding: .3rem 1.5rem;
     }
-    
+
     &--large{
         padding: 1rem 5rem;
         font-size: 1.35rem;

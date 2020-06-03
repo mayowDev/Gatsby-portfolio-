@@ -11,18 +11,8 @@
         width: 1440px;
         max-width: 90%;
         margin: 0 auto;
-    }
-    
+    }   
 }
-
-// .cf:after,
-// .cf:before{
-//     content: " ";
-//     display: table;
-// }
-// .cf:after{
-//     clear: both;
-// }
 
 @mixin responsive($breakpoint){
     @if $breakpoint == phone {

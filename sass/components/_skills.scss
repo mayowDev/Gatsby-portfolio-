@@ -1,4 +1,5 @@
 .skills{
+    // @include clearfix;
     @supports(display: grid){
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(25rem, 3fr));
