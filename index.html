@@ -10,20 +10,38 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="body-container">
-    <!-- hero section -->
     <header class="header">
+        
         <div class="header__box">
             <a href="index.html" class="header__logo">
                 <span class="grey-color"> &lt;</span>
                 <p class="logo-name">Mayow Dev</p>
                 <span class="grey-color">/&gt;</span>
             </a>
+            <!-- mobile navigation -->
+            <div class="header__navigation">
+                <input type="checkbox" class="navigation-checkbox" id="navi-toggle">
+                <label for="navi-toggle" class="navigation-button">
+                    <span class="navigation-icon">&nbsp;</span>
+                </label>
+                <div class="navigation-background">&nbsp;</div>
+                <nav class="navigation-nav">
+                    <ul class="navigation-list">
+                        <li class="navigation-item"><a href="index.html" class="navigation-link"><span>01.</span> Home</a></li>
+                        <li class="navigation-item"><a href="#about" class="navigation-link"><span>02.</span>About</a></li>
+                        <li class="navigation-item"><a href="#projects" class="navigation-link"><span>03.</span>Portfolio</a></li>
+                        <li class="navigation-item"><a href="#contact" class="navigation-link"><span>04.</span>Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- mobile-Navigation Ends | normal navigation starts-->
             <nav class="header__nav">
                 <a class="nav-item" href="index.html" >01.  Home</a>
                 <a class="nav-item" href="#about" >02.  About</a>
                 <a class="nav-item" href="#projects" >03.  Portfolio</a>
                 <a class="nav-item" href="#contact" >04.  Contact</a>
             </nav>
+            <!-- normal-navigation Ends-->
         </div>
         <div class="header__content">
             <h1 class="heading-primary">
@@ -40,8 +58,6 @@
             </div>
         </div>
     </header>
-    
-
       <!--- skills section ---> 
       <!--
       <section id="skills" >

@@ -5,6 +5,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     padding: 3rem 0;
+    backface-visibility: hidden;
 
     display: grid;
     grid-column: 1 / -1;
@@ -17,12 +18,170 @@
         align-items: center;
         align-content: space-between;
     }
+    // mobile navigation start
+    &__navigation{
+        @include responsive(desktop){
+            display: none; //above 1200px/ipad
+        }
+        @include responsive(big-desktop){
+            display: none; //above 1800px/large screen
+        }
+        backface-visibility: hidden;
+        .navigation-checkbox{
+            display: none;
+        }
+        .navigation-button{
+            background-color: $color-white;
+            height: 7rem;
+            width: 7rem;
+            position: fixed;
+            top: 3.5rem;
+            right: 5rem;
+            border-radius: 50%;
+            z-index: 2000;
+            box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
+            text-align: center;
+            cursor: pointer;
+            @include responsive(tablet){
+                top: 4rem;
+                right: 4rem;
+            }
+            @include responsive(phone){
+                top: 3rem;
+                right: 3rem;
+            }
+        }
+        .navigation-background{
+            height: 6rem;
+            width: 6rem;
+            border-radius: 50%;
+            position: fixed;
+            top: 3.5rem;
+            right: 5.5rem;
+            @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)){
+                -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(5px);
+                background-image: linear-gradient(rgba($color-black, .9), rgba(51, 34, 61, 0.9));
+            }
+            background-image: radial-gradient(
+                $color-light-grey,
+                $color-dark-grey
+            );
+            z-index: 1000;
+            transition: transform .8s cubic-bezier(0.23, 1, 0.32, 1); 
+            @include responsive(tablet){
+                top: 4.5rem;
+                right: 4.5rem;
+            }
+            @include responsive(phone){
+                top: 3.5rem;
+                right: 3.5rem;
+            }  
+        }
+        .navigation-nav{
+            height: 100vh;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1500;
+            opacity: 0;
+            transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        .navigation-list {
+            color: $color-white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            list-style: none;
+            text-decoration: none;
+            text-align: center;
+            width: 100%;
+        }
+        .navigation-item{
+            margin: 1rem;
+        }
+        .navigation-link{
+            &:link,
+            &:visited{
+                color: $color-white;
+                display: inline-block;
+                font-size: 3rem;
+                font-weight: 300;
+                padding: 1rem 2rem;
+                text-decoration: none;
+                text-transform: uppercase;
+                background-image: linear-gradient(
+                120deg,
+                transparent 0%,
+                transparent 50%,
+                $color-white 50%
+                );
+                background-size: 250%;
+                transition: all 0.4s;
+            }
+            &:hover,
+            &:active {
+                background-position: 100%;
+                color: $color-dark-grey;
+                transform: translateX(1rem);
+            }
+            span{
+                display: inline-block;
+                margin-right: .5rem;
+            }
+        }
     
+        .navigation-checkbox:checked ~ .navigation-background{
+            transform: scale(70);
+        }
+        .navigation-checkbox:checked ~ .navigation-nav{
+            width: 100%;
+            opacity: 1;
+        }
+        // nav icon 
+        .navigation-icon{
+            position: relative;
+            margin-top: 3.5rem;
+            &,
+            &::before,
+            &::after{
+                height: 2px;
+                width: 3rem;
+                background-color: $color-dark-grey;
+                display: inline-block;
+            }
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                transition: all 0.2s;
+            }
+            &::before{  top: -.8rem}
+            &::after{  top: .8rem}
+        }
+        .navigation-button:hover .navigation-icon::before{top: -1rem;}
+        .navigation-button:hover .navigation-icon::after{top: 1rem;}
+        .navigation-checkbox:checked + .navigation-button .navigation-icon{
+            background-color: transparent;
+        }
+        .navigation-checkbox:checked + .navigation-button .navigation-icon::before{
+            top: 0;
+            transform: rotate(135deg);
+        }
+        .navigation-checkbox:checked + .navigation-button .navigation-icon::after{
+            top: 0;
+            transform: rotate(-135deg);
+        }
+    }
+    // mobile navigation end
     &__nav{
         margin-right: -8%;
-        @include responsive(tablet){
+        @include responsive(tablet-land){
             display: none; //1200px
-            margin-right: -4%;
+            // margin-right: -4%;
         }
         .nav-item{
             color: $color-white;
@@ -53,14 +212,14 @@
             margin-left: 3%;
         }
         @include responsive(tablet-land){
-            margin-left: -2%;
+            margin-left: 2%;
         }
         
         @include responsive(phone){
             display: none;
         }
     }
-     
+   
     &__content{
         position: relative;
         padding: 10rem 0 12rem 0;
