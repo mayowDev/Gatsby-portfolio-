@@ -16,7 +16,7 @@
 
 @mixin responsive($breakpoint){
     @if $breakpoint == phone {
-        @media only screen and (max-width: 37.5em){ @content }; //600px to em
+        @media only screen and (max-width: 37.5em){ @content }; //below 600px to em
     }
     @if $breakpoint == tablet {
         @media only screen and (max-width:56.25em){ @content }; //900px to em

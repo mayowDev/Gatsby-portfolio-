@@ -1,4 +1,5 @@
-import './css/style.css'
+import './css/style.css';
+require('./css/style.css');
 
 let tabs = document.querySelector('#tabs').getElementsByTagName('a');
 let card = document.querySelector('.container').children

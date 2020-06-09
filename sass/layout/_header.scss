@@ -221,13 +221,18 @@
     }
    
     &__content{
+        // position: absolute;
+        text-align: center;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         position: relative;
         padding: 10rem 0 12rem 0;
         @include responsive(tablet-land){
             padding: 15rem 0 10rem 0; //1200px
         }
         @include responsive(phone){
-            padding: 0 auto; //1200px
+            padding: 0 auto; 
             margin: 5rem 0 auto 0;
         }
         .heading-primary, .subtitle{
@@ -238,6 +243,9 @@
             justify-self: center;
             font-weight: 500;
             font-size: 5rem;
+            @include responsive(phone){
+                font-size: 4rem; //above 1200px/ipad
+            }
         }
         
         .subtitle{
@@ -249,6 +257,9 @@
             @include responsive(tablet){
                 font-size: 3.4rem; //1200px
             }
+            // @include responsive(phone){
+            //     font-size: 2rem; //above 1200px/ipad
+            // }
         }
         .btn{
             @include responsive(phone){

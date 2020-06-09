@@ -22,9 +22,6 @@ html {
   @media only screen and (max-width: 56.25em) {
     html {
       font-size: 50%; } }
-  @media only screen and (max-width: 37.5em) {
-    html {
-      font-size: 40%; } }
   @media only screen and (min-width: 112.5em) {
     html {
       font-size: 75%; } }
@@ -43,7 +40,7 @@ li {
 ::selection {
   background-color: #7ac483; }
 
-.body-container {
+.bbody-container {
   display: grid;
   grid-template-rows: 80vh;
   grid-template-columns: [sidebar-start] 8rem [sidebar-end grid-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [grid-end]; }
@@ -63,7 +60,7 @@ body {
     opacity: 1; } }
 
 .skills {
-  padding: 3rem 0 12rem 0;
+  padding: 3rem 0 8rem 0;
   position: relative; }
   @supports (display: grid) {
     .skills {
@@ -108,16 +105,16 @@ body {
 #contact {
   align-items: center;
   background: #f2f1f8;
-  padding: 4rem 0 8rem 0;
+  padding: 6rem 0 12rem 0;
   text-align: center; }
   #contact .title {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     color: #3f3d4e;
     font-weight: 600;
     margin: 0; }
   #contact .sub_title {
     color: #b9b7c6;
-    font-size: 1.5rem;
+    font-size: 2.2rem;
     text-align: center;
     width: 600px;
     max-width: 100%;
@@ -352,6 +349,10 @@ body {
       .header__logo {
         display: none; } }
   .header__content {
+    text-align: center;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     position: relative;
     padding: 10rem 0 12rem 0; }
     @media only screen and (max-width: 75em) {
@@ -368,6 +369,9 @@ body {
       justify-self: center;
       font-weight: 500;
       font-size: 5rem; }
+      @media only screen and (max-width: 37.5em) {
+        .header__content .heading-primary {
+          font-size: 4rem; } }
     .header__content .subtitle {
       font-weight: 300;
       font-size: 2.4rem;
@@ -383,8 +387,9 @@ body {
 
 footer {
   background: #3f3d4e;
-  padding: 4rem 0; }
+  padding: 6rem 0; }
   footer .copyright {
+    font-size: 1.5rem;
     font-weight: 700;
     color: #b9b7c6;
     text-align: center; }
@@ -396,10 +401,10 @@ footer {
     flex-wrap: wrap;
     justify-content: center; }
     footer .social-icons .fab, footer .social-icons .fas {
-      margin: 1.5rem .5rem 0 .5rem;
-      padding: .4rem;
+      margin: 2.5rem .8rem 0 .8rem;
+      padding: .8rem;
       color: #b9b7c6;
-      font-size: 1.5rem;
+      font-size: 2.5rem;
       cursor: pointer; }
 
 /* ---------------------- Projects section  -------------*/
@@ -432,7 +437,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     column-gap: 3rem;
-    margin: 8rem 0;
+    margin: 4rem 0 6rem 0;
     padding: 3rem;
     border-bottom: 1px solid #b9b7c6; }
     #projects .project .project-image {
@@ -467,67 +472,47 @@ footer {
       #projects .project .project-text .btn-box a {
         border-radius: none; }
 
-/* ------------------- Other project with filter taps  -----------*/
-#filter-section {
-  background: #f2f1f8;
-  color: #3f3d4e;
+.filter-section {
   text-align: center; }
-  #filter-section::after {
-    content: "";
-    display: table;
-    clear: both; }
-  #filter-section .title {
-    font-size: 2rem;
+  .filter-section .title {
+    font-size: 3rem;
     font-weight: 600;
     display: inline-block;
     position: relative;
-    margin-top: 2rem; }
-    #filter-section .title::after {
+    margin: 5rem 0; }
+    .filter-section .title::after {
       content: " ";
-      margin: .5rem;
+      margin: 1rem;
       background: #7ac483;
-      width: 50%;
-      height: 0.3rem;
+      width: 70%;
+      height: 7%;
       top: 90%;
       bottom: 0;
-      left: 25%;
+      left: 15%;
       position: absolute; }
-  #filter-section .filter-tabs ul li {
-    list-style-type: none;
-    display: inline-block;
-    margin: 25px 20px;
-    align-items: center; }
-    #filter-section .filter-tabs ul li a {
-      display: inline-block;
-      font-size: 1rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      cursor: pointer; }
-      #filter-section .filter-tabs ul li a:hover {
-        color: #7ac483; }
-      #filter-section .filter-tabs ul li a.active {
-        color: #7ac483; }
-  #filter-section .isotape .container {
-    width: 31%;
+  .filter-section .isotape .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; }
-    #filter-section .isotape .container .card {
-      border-radius: .35rem;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 3fr)); }
+    .filter-section .isotape .container .card {
+      border-radius: .5rem;
       box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.1);
       -webkit-box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.1);
       -moz-box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.1);
       margin: 3rem 1rem;
-      padding: 1rem .3rem;
+      padding: 1.5rem .5rem;
       animation: fadein 3s; }
-      #filter-section .isotape .container .card img {
-        width: 340px;
-        height: 100%; }
-      #filter-section .isotape .container .card .project-title {
+      .filter-section .isotape .container .card img {
+        width: 100%; }
+      .filter-section .isotape .container .card .project-title {
+        font-size: 2rem;
         text-align: left;
         padding: 10px 0;
         margin-left: 2.5rem; }
-      #filter-section .isotape .container .card p {
+      .filter-section .isotape .container .card p {
         text-align: left;
+        color: #3f3d4e;
+        font-weight: 300;
+        font-size: 1.8rem;
         margin-left: 2.5rem;
         padding: 10px 0;
         line-height: 1.5; }
